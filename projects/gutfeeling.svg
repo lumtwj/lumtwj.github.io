@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="A steaming hawker bowl under a spinning arrow, with a die deciding the next meal">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#12151b"/>
+      <stop offset="1" stop-color="#0a0c10"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="0.78" cy="0.12" r="0.9">
+      <stop offset="0" stop-color="#ffab53" stop-opacity="0.3"/>
+      <stop offset="0.55" stop-color="#ffab53" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffab53"/>
+      <stop offset="1" stop-color="#c9791f"/>
+    </linearGradient>
+    <filter id="soft2" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  <rect width="800" height="500" fill="url(#glow2)"/>
+
+  <!-- Hawker centre light haze -->
+  <ellipse cx="400" cy="330" rx="230" ry="90" fill="#ffab53" opacity="0.1" filter="url(#soft2)"/>
+
+  <!-- Shuffle ring: the decision spinning around the bowl -->
+  <g fill="none" stroke="#ffab53" stroke-opacity="0.4" stroke-width="3"
+     stroke-linecap="round" stroke-dasharray="16 14">
+    <circle cx="400" cy="300" r="182"/>
+  </g>
+  <!-- Arrowhead riding the ring, pointing clockwise -->
+  <g transform="translate(400 118) rotate(28)">
+    <path d="M-13 -11L15 0L-13 11z" fill="#ffab53" fill-opacity="0.9"/>
+  </g>
+
+  <!-- Steam -->
+  <g fill="none" stroke="#f1f1ed" stroke-opacity="0.3" stroke-width="4" stroke-linecap="round">
+    <path d="M356 236c-14-16 12-26-2-44"/>
+    <path d="M400 226c-16-20 14-32-2-54"/>
+    <path d="M444 236c-14-16 12-26-2-44"/>
+  </g>
+
+  <!-- Bowl -->
+  <path d="M282 268h236c0 66-53 112-118 112s-118-46-118-112z" fill="url(#bowl)"/>
+  <path d="M282 268h236" stroke="#0a0c10" stroke-opacity="0.35" stroke-width="6"/>
+  <ellipse cx="400" cy="268" rx="118" ry="16" fill="#ffd6a3" opacity="0.35"/>
+  <path d="M340 392h120" stroke="#c9791f" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Chopsticks -->
+  <g stroke="#f1f1ed" stroke-opacity="0.75" stroke-width="7" stroke-linecap="round">
+    <path d="M494 178L392 306"/>
+    <path d="M528 196L418 316"/>
+  </g>
+
+  <!-- The die: fate picks the meal -->
+  <g transform="rotate(-12 214 214)">
+    <rect x="164" y="164" width="100" height="100" rx="20" fill="#0e1216" stroke="#ffab53" stroke-width="3"/>
+    <g fill="#ffab53">
+      <circle cx="192" cy="192" r="8"/>
+      <circle cx="236" cy="192" r="8"/>
+      <circle cx="214" cy="214" r="8"/>
+      <circle cx="192" cy="236" r="8"/>
+      <circle cx="236" cy="236" r="8"/>
+    </g>
+  </g>
+
+  <!-- Rejected options, struck out -->
+  <g stroke="#ff425f" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round">
+    <path d="M596 300h84"/><path d="M596 336h84"/>
+  </g>
+  <g fill="#ffffff" fill-opacity="0.14">
+    <rect x="596" y="294" width="84" height="12" rx="6"/>
+    <rect x="596" y="330" width="84" height="12" rx="6"/>
+    <rect x="596" y="366" width="84" height="12" rx="6"/>
+  </g>
+  <rect x="596" y="366" width="52" height="12" rx="6" fill="#ffab53" fill-opacity="0.85"/>
+</svg>
