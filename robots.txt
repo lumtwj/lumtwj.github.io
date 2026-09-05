@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://lumtw.com
+Sitemap: https://lumtw.com/sitemap.xml
