@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="A live PSI gauge over a hazy Singapore skyline, with airborne particles drifting past">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#12151b"/>
+      <stop offset="1" stop-color="#0a0c10"/>
+    </linearGradient>
+    <radialGradient id="glow5" cx="0.8" cy="0.1" r="0.9">
+      <stop offset="0" stop-color="#35d6c4" stop-opacity="0.28"/>
+      <stop offset="0.55" stop-color="#35d6c4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="haze5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffab53" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffab53" stop-opacity="0.22"/>
+    </linearGradient>
+    <filter id="soft5" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg5)"/>
+  <rect width="800" height="500" fill="url(#glow5)"/>
+
+  <!-- Haze layer settling over the island -->
+  <rect x="0" y="250" width="800" height="250" fill="url(#haze5)"/>
+  <ellipse cx="400" cy="386" rx="300" ry="70" fill="#ffab53" opacity="0.1" filter="url(#soft5)"/>
+
+  <!-- Skyline: the CBD reduced to bars, softened by the haze -->
+  <g fill="#0e1216" stroke="#35d6c4" stroke-opacity="0.35" stroke-width="2">
+    <rect x="96" y="318" width="44" height="112"/>
+    <rect x="150" y="286" width="38" height="144"/>
+    <rect x="198" y="336" width="52" height="94"/>
+    <rect x="260" y="266" width="40" height="164"/>
+    <rect x="548" y="300" width="46" height="130"/>
+    <rect x="604" y="342" width="38" height="88"/>
+    <rect x="652" y="276" width="50" height="154"/>
+  </g>
+  <!-- Lit windows -->
+  <g fill="#35d6c4" fill-opacity="0.5">
+    <rect x="160" y="300" width="8" height="8"/><rect x="174" y="326" width="8" height="8"/>
+    <rect x="270" y="284" width="8" height="8"/><rect x="284" y="318" width="8" height="8"/>
+    <rect x="662" y="292" width="8" height="8"/><rect x="676" y="336" width="8" height="8"/>
+    <rect x="558" y="320" width="8" height="8"/>
+  </g>
+  <path d="M0 430h800" stroke="#35d6c4" stroke-opacity="0.3" stroke-width="3"/>
+
+  <!-- PSI gauge: the live reading, arc filled to a moderate band -->
+  <g transform="translate(400 300)">
+    <path d="M-150 0a150 150 0 0 1 300 0" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="18" stroke-linecap="round"/>
+    <path d="M-150 0a150 150 0 0 1 232 -95" fill="none" stroke="#35d6c4" stroke-width="18" stroke-linecap="round"/>
+    <!-- Needle -->
+    <g transform="rotate(52)">
+      <path d="M0 0L118 0" stroke="#f1f1ed" stroke-opacity="0.85" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <circle cx="0" cy="0" r="11" fill="#0e1216" stroke="#35d6c4" stroke-width="3"/>
+    <!-- Tick marks along the band -->
+    <g stroke="#f1f1ed" stroke-opacity="0.25" stroke-width="3" stroke-linecap="round">
+      <path d="M-176 0h-16"/>
+      <path d="M-124 -124l-11 -11"/>
+      <path d="M0 -176v-16"/>
+      <path d="M124 -124l11 -11"/>
+      <path d="M176 0h16"/>
+    </g>
+  </g>
+
+  <!-- PM2.5 particles drifting through the frame -->
+  <g fill="#ffab53" fill-opacity="0.55">
+    <circle cx="88" cy="132" r="5"/><circle cx="146" cy="196" r="3"/>
+    <circle cx="228" cy="118" r="4"/><circle cx="318" cy="176" r="3"/>
+    <circle cx="486" cy="150" r="4"/><circle cx="562" cy="104" r="5"/>
+    <circle cx="638" cy="188" r="3"/><circle cx="716" cy="140" r="4"/>
+    <circle cx="694" cy="234" r="3"/><circle cx="112" cy="252" r="4"/>
+  </g>
+
+  <!-- Region readings, the five zones NEA reports -->
+  <g fill="#ffffff" fill-opacity="0.14">
+    <rect x="60" y="452" width="120" height="12" rx="6"/>
+    <rect x="200" y="452" width="120" height="12" rx="6"/>
+    <rect x="340" y="452" width="120" height="12" rx="6"/>
+    <rect x="480" y="452" width="120" height="12" rx="6"/>
+    <rect x="620" y="452" width="120" height="12" rx="6"/>
+  </g>
+  <g fill="#35d6c4" fill-opacity="0.85">
+    <rect x="60" y="452" width="74" height="12" rx="6"/>
+    <rect x="200" y="452" width="52" height="12" rx="6"/>
+    <rect x="340" y="452" width="88" height="12" rx="6"/>
+    <rect x="480" y="452" width="61" height="12" rx="6"/>
+    <rect x="620" y="452" width="45" height="12" rx="6"/>
+  </g>
+</svg>
